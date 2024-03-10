@@ -7,24 +7,22 @@ const nodemailer = require('nodemailer');
 const app = express();
 const PORT = process.env.PORT || 10000;
 
-// Create a MySQL connection pool
 const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: 'Np06181993',
-  database: 'my_advertising_website',
+  host: process.env.DB_HOST || 'localhost',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || 'NP06181993',
+  database: process.env.DB_NAME || 'my_advertising_website',
   connectionLimit: 10,
 });
 
 app.use(bodyParser.json());
 app.use(cors());
 
-// Nodemailer setup
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // Update with your email service provider
+  service: 'gmail',
   auth: {
-    user: 'npidaoc@gmail.com', // Update with your email address
-    pass: 'gzbo dpqt tgxd xguj', // Update with your email password or app password
+    user: process.env.EMAIL_USER || 'npidaoc@gmail.com',
+    pass: process.env.EMAIL_PASSWORD || 'gzbo dpqt tgxd xguj',
   },
 });
 
