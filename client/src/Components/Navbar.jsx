@@ -14,7 +14,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
-import axios from 'axios'; // Import Axios
+import axios from 'axios';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
