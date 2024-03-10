@@ -8,10 +8,10 @@ const app = express();
 const PORT = 5000;
 
 const pool = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'NP06181993',
-  database: process.env.DB_NAME || 'my_advertising_website',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
   connectionLimit: 10,
 });
 
@@ -22,8 +22,8 @@ app.use(cors());
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER || 'npidaoc@gmail.com',
-    pass: process.env.EMAIL_PASSWORD || 'gzbo dpqt tgxd xguj',
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 
