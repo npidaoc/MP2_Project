@@ -1,0 +1,814 @@
+/* Reset default styles for margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Reem Kufi", sans-serif !important;
+}
+
+/* Navigation Logo styling */
+nav .nav-logo-container img {
+  width: 100px;
+  margin-left: 60px;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* App container styling */
+.App {
+  min-height: 100vh;
+  width: 90vw;
+  max-width: 1900px;
+  margin: 0rem auto;
+}
+
+/* Body styling */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #f6f6f6;
+}
+
+/* Navigation bar styling */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+}
+
+/* Navigation bar styling */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+}
+
+/* Navbar menu container */
+.navbar-menu-container {
+  display: none;
+}
+
+/* Navbar links container */
+.navbar-links-container a {
+  margin-right: 3rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Navbar links hover effect styling */
+.navbar-links-container a:after {
+  content: '';
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ff1702;
+  transition: width 0.3s ease; /* Smooth transition added here */
+}
+
+.navbar-links-container a:hover:after {
+  width: 100%;
+}
+
+/* Styling for the main navbar container */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-right: 200px;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+/* Styling when the navbar is scrolled */
+.navbar-container.scrolled {
+  background-color: #eddfdf;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
+}
+
+/* Navbar menu icon styling */
+.navbar-menu-container svg {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+/* Primary button styling */
+.primary-button {
+  padding: 0.9rem 1.75rem;
+  background-color: white;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+  margin-right: 3rem;
+}
+
+/* Primary button hover effect */
+.primary-button:hover {
+  background-color: rgb(234, 234, 234);
+}
+
+
+/* Home banner styling */
+.home-banner-container {
+  position: relative;
+  display: flex;
+  padding-top: 3rem;
+  margin-top: 100px;
+}
+
+/* Home banner image container styling */
+.home-bannerImage-container {
+  position: absolute;
+  top: -100px;
+  right: -170px;
+  z-index: -2;
+  max-width: 700px;
+}
+
+/* Home image section styling */
+.home-image-section > img {
+  width: 150%;
+}
+
+/* Home text section styling */
+.home-text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* About section info heading styling */
+.about-section-info h2 {
+  margin: 1rem 0rem;
+}
+
+/* About section top heading specific styling */
+.about-section-top .primary-heading {
+  font-size: 50px !important;
+  white-space: nowrap;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  margin-left: -150px;
+}
+
+/* About section bottom styling */
+.about-section-bottom {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* About section info paragraph styling */
+.about-section-info p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+/* about section wrapper styling */
+.about-section-wrapper {
+  margin-top: 10rem;
+}
+
+/* about section top paragraph styling */
+.about-section-top p {
+  text-align: center;
+  max-width: 600px !important;
+}
+
+/* about section top heading styling */
+.about-section-top h1 {
+  font-size: 50px !important;
+}
+
+/* about section top container styling */
+.about-section-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* about section info container styling */
+.about-section-info {
+  width: 290px;
+  min-height: 350px;
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  color: #505050;
+  margin: 1rem 2rem;
+}
+
+/* about section info heading styling */
+.about-section-info h2 {
+  margin: 1rem 0rem;
+}
+
+/* about section bottom styling */
+.about-section-bottom {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+/* Primary heading styling */
+.primary-heading {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #4c4c4c;
+  max-width: 600px;
+}
+
+.primary-subheading {
+  color: #f02d2d;
+}
+
+/* Primary text styling */
+.primary-text {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  max-width: 500px;
+  color: #6a6a6a;
+  margin: 1.5rem 0rem;
+}
+
+/* Secondary button styling */
+.secondary-button {
+  padding: 1rem 2.5rem;
+  background-color: #f02d2d;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for icons inside secondary buttons */
+.secondary-button svg {
+  margin-left: 0.75rem;
+  font-size: 1.5rem;
+}
+
+/* Secondary button hover effect */
+.secondary-button:hover {
+  background-color: #000000;
+}
+
+/* Modal styling */
+.modal-container {
+  width: 300px;
+  padding: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Modal header styling */
+.modal-header {
+  margin-bottom: 20px;
+}
+
+/* Modal input styling */
+.modal-input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+/* Modal button styling */
+.modal-button {
+  padding: 10px;
+  background-color: #f02d2d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Modal button hover effect */
+.modal-button:hover {
+  background-color: #000000;
+}
+
+/* Registration button styling */
+.registration-button {
+  padding: 1rem 2.5rem;
+  background-color: #f02d2d;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Registration button hover effect */
+.registration-button:hover {
+  background-color: #000000;
+}
+
+/* Contact page wrapper styling */
+.contact-page-wrapper h1 {
+  font-size: 40px !important;
+}
+
+/* Contact page wrapper container styling */
+.contact-page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 6rem 0rem;
+}
+
+/* Contact form container styling */
+.contact-form-container {
+  background-color: white;
+  max-width: 700px;
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5rem;
+}
+
+/* Contact form input styling */
+.contact-form-container input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+}
+
+.contact-form-container textarea {
+  flex: 1;
+  border-color: #f02d2d;
+  outline: none;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  margin-right: 25px;
+}
+
+
+
+/* Testimonial section bottom styling */
+.testimonial-section-bottom {
+  margin-top: 2rem;
+  background-color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 750px;
+  border-radius: 2rem;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Testimonial section bottom margin styling */
+.testimonial-section-bottom {
+  margin: 2rem auto;
+}
+
+/* Testimonial section bottom paragraph styling */
+.testimonial-section-bottom p {
+  font-weight: 700;
+  color: #515151;
+  max-width: 500px;
+  font-size: 1.1rem;
+  margin: 2rem 0rem;
+}
+
+/* Testimonials stars container styling */
+.testimonials-stars-container svg {
+  margin: 0rem 0.25rem;
+  font-size: 1.5rem;
+  color: #fe9e0d;
+}
+
+/* Testimonial section bottom heading styling */
+.testimonial-section-bottom h2 {
+  margin-top: 1.5rem;
+}
+
+/* Title with border styling */
+.title-with-border {
+  border-bottom: 2px solid red;
+}
+
+/* Work section wrapper styling */
+.work-section-wrapper {
+  margin-top: 10rem;
+}
+
+/* Work section top paragraph styling */
+.work-section-top p {
+  text-align: center;
+  max-width: 600px !important;
+}
+
+/* Work section top heading styling */
+.work-section-top h1 {
+  font-size: 50px !important;
+}
+
+/* Work section top container styling */
+.work-section-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Work section info container styling */
+.work-section-info {
+  width: 290px;
+  min-height: 350px;
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  color: #505050;
+  margin: 1rem 2rem;
+}
+
+/* Work section info heading styling */
+.work-section-info h2 {
+  margin: 1rem 0rem;
+}
+
+/* Work section bottom styling */
+.work-section-bottom {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Work section info paragraph styling */
+.work-section-info p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+/* Media query for screens up to 1000px */
+@media (max-width: 1000px) {
+  /* Responsive styling for navbar links */
+  .navbar-links-container a {
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Responsive styling for primary button */
+  .primary-button {
+    font-size: 1rem;
+  }
+
+  /* Responsive styling for home banner image container */
+  .home-bannerImage-container {
+    max-width: 600px;
+  }
+}
+
+/* Media query for screens up to 800px */
+@media (max-width: 800px) {
+  /* Responsive styling for navigation logo container */
+  .nav-logo-container {
+    max-width: 140px;
+  }
+
+  /* Responsive styling for navbar links and menu container */
+  .navbar-links-container {
+    display: none;
+  }
+
+  .navbar-menu-container {
+    display: flex;
+  }
+
+  /* Responsive styling for home banner image container */
+  .home-bannerImage-container {
+    max-width: 450px;
+  }
+
+  /* Responsive styling for home banner and about section containers */
+  .home-banner-container,
+  .about-section-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Responsive styling for about section container */
+  .about-section-container {
+    flex-direction: column;
+  }
+
+  /* Responsive styling for home image and about section image containers */
+  .home-image-section,
+  .about-section-image-container {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Responsive styling for primary heading */
+  .primary-heading {
+    text-align: center;
+    max-width: 90%;
+  }
+
+  /* Responsive styling for primary text */
+  .primary-text {
+    text-align: center;
+    max-width: 80%;
+  }
+
+  /* Responsive styling for home and about text sections */
+  .home-text-section,
+  .about-section-text-container {
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  /* Responsive styling for secondary button */
+  .secondary-button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+  }
+
+  /* Responsive styling for about section container */
+  .about-section-container {
+    margin-top: 5rem !important;
+  }
+
+  /* Responsive styling for about buttons container */
+  .about-buttons-container {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  /* Responsive styling for primary subheading */
+  .primary-subheading {
+    text-align: center;
+  }
+
+  /* Responsive styling for watch video button */
+  .watch-video-button {
+    margin-left: 0rem !important;
+    margin-top: 1rem;
+    font-size: 1rem !important;
+  }
+
+  /* Responsive styling for watch video button icon */
+  .watch-video-button svg {
+    margin-right: 0.5rem !important;
+  }
+
+  /* Responsive styling for about section image container */
+  .about-section-image-container {
+    margin-right: 0rem !important;
+  }
+
+  /* Responsive styling for work section wrapper */
+  .work-section-wrapper {
+    margin-top: 5rem !important;
+  }
+
+  /* Responsive styling for work section bottom */
+  .work-section-bottom {
+    margin-top: 1rem !important;
+  }
+
+  /* Responsive styling for contact form container */
+  .contact-form-container {
+    padding: 0.5rem !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem !important;
+  }
+
+  /* Responsive styling for contact form input */
+  .contact-form-container input {
+    font-size: 1rem !important;
+    max-width: 100%;
+    padding: 0.5rem 1rem !important;
+    margin-bottom: 0.8rem !important;
+    text-align: center;
+  }
+}
+
+/* Footer styling */
+footer {
+  font-size: 15px;
+  padding-top: 50px;
+}
+
+/* Footer container styling */
+.footer-container {
+  background-color: #f5f5f5;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Footer content styling */
+.footer-content {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Footer heading styling */
+h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Footer paragraph styling */
+.footer-content p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Footer paragraph with SVG styling */
+.footer-content p > svg {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* Footer unordered list styling */
+.footer-content ul {
+  text-align: center;
+}
+
+/* List styling */
+.list {
+  padding: 0;
+}
+
+/* Footer container heading styling */
+.footer-container h3 {
+  margin-top: 50px;
+}
+
+/* List heading styling */
+.list h3 {
+  color: #4b413f;
+}
+
+/* List anchor and paragraph styling */
+.list a,
+p {
+  color: #1d1c1c;
+}
+
+/* List item styling */
+.list li {
+  width: auto;
+  text-align: center;
+  list-style-type: none;
+  padding: 7px;
+  position: relative;
+}
+
+/* List item hover effect styling */
+.list li::before {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background: #ff1702;
+  transition-duration: 0.5s;
+}
+
+
+/* List item hover effect styling on hover */
+.list li:hover::before {
+  width: 70px;
+}
+
+/* Social icons container styling */
+.social-icons {
+  text-align: center;
+  padding: 0;
+}
+
+/* Social icons list item styling */
+.social-icons li {
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Social icons styling */
+.social-icons {
+  color: #010000;
+  font-size: 30px;
+}
+
+/* Anchor styling */
+a {
+  text-decoration: none;
+}
+
+/* Social icons hover effect styling */
+.social-icons :hover {
+  color: #000000;
+}
+
+/* Bottom bar styling */
+.bottom-bar {
+  background: #f18930;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}
+
+/* Bottom bar paragraph styling */
+.bottom-bar p {
+  color: #0a0a0a;
+  margin: 0;
+  font-size: 16px;
+  padding: 7px;
+}
+
+/* App container max width styling */
+.App {
+  max-width: 95vw;
+}
+
+/* Media query for screens up to 600px */
+@media (max-width: 600px) {
+  /* Hide home banner and about background image containers */
+  .home-bannerImage-container,
+  .about-background-image-container {
+    display: none;
+  }
+}
+
+/* Media query for screens up to 768px */
+@media only screen and (max-width: 768px) {
+  /* Adjust footer width for smaller screens */
+  footer {
+    width: 100%;
+  }
+}
