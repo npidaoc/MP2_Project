@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 10000;
 
 // Create a MySQL connection pool
 const pool = mysql.createPool({
