@@ -62,7 +62,7 @@ app.post('/api/register', (req, res) => {
 //   res.send('Hello, this is NP advertising solution');
 // });
 app.get('/api/data', (req, res) => {
-  res.json({ message: 'Hello World' });
+  res.json({ message: 'Hello Nhed' });
 });
 
 
