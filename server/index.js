@@ -9,22 +9,21 @@ const app = express();
 const PORT = 5000;
 
 const pool = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'your_database_password',
-  database: process.env.DB_NAME || 'my_advertising_website',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
   connectionLimit: 10,
 });
 
 app.use(bodyParser.json());
 app.use(cors());
 
-
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER || 'npidaoc@gmail.com',
-    pass: process.env.EMAIL_PASSWORD || 'gzbo dpqt tgxd xguj',
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 
@@ -58,13 +57,9 @@ app.post('/api/register', (req, res) => {
   });
 });
 
-// app.get('/', (req, res) => {
-//   res.send('Hello, this is NP advertising solution');
-// });
 app.get('/api/data', (req, res) => {
   res.json({ message: 'Hello Nhed' });
 });
-
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
