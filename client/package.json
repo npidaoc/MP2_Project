@@ -9,7 +9,6 @@
     "start:server": "cd ../server && npm start",
     "build:client": "vite build",
     "preview": "vite preview"
-    "start": "npm run start:client"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
