@@ -10,7 +10,7 @@ const PORT = 5000;
 const pool = mysql.createPool({
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'your_database_password',
+  password: process.env.DB_PASSWORD || 'NP06181993',
   database: process.env.DB_NAME || 'my_advertising_website',
   connectionLimit: 10,
 });
