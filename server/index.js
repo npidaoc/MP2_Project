@@ -5,24 +5,26 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = 5000;
 
+// Create a MySQL connection pool
 const pool = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'NP06181993',
-  database: process.env.DB_NAME || 'my_advertising_website',
+  host: 'localhost',
+  user: 'root',
+  password: 'Np06181993',
+  database: 'my_advertising_website',
   connectionLimit: 10,
 });
 
 app.use(bodyParser.json());
 app.use(cors());
 
+// Nodemailer setup
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'gmail', // Update with your email service provider
   auth: {
-    user: process.env.EMAIL_USER || 'npidaoc@gmail.com',
-    pass: process.env.EMAIL_PASSWORD || 'gzbo dpqt tgxd xguj',
+    user: 'npidaoc@gmail.com', // Update with your email address
+    pass: 'gzbo dpqt tgxd xguj', // Update with your email password or app password
   },
 });
 
@@ -64,6 +66,6 @@ app.get('/api/data', (req, res) => {
 });
 
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
