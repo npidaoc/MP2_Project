@@ -26,6 +26,7 @@ const Navbar = () => {
   const [fullNameError, setFullNameError] = useState("");
   const [phoneNumberError, setPhoneNumberError] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [registrationError, setRegistrationError] = useState("");
 
   const menuOptions = [
     {
@@ -64,6 +65,7 @@ const Navbar = () => {
     setFullNameError("");
     setPhoneNumberError("");
     setEmailError("");
+    setRegistrationError("");
     setOpenModal(true);
   };
 
@@ -91,14 +93,17 @@ const Navbar = () => {
       if (response.status === 200) {
         console.log('Registration successful!');
         alert('Registration successful!');
+        setFullName("");
+        setPhoneNumber("");
+        setEmail("");
         setOpenModal(false);
       } else {
         console.error('Registration failed:', response.status, response.data);
-        alert('Registration failed. Please try again.');
+        setRegistrationError('Registration failed. Please try again.');
       }
     } catch (error) {
       console.error('Error during registration:', error);
-      alert('An error occurred. Please try again.');
+      setRegistrationError('An error occurred. Please try again.');
     }
   };
 
@@ -197,6 +202,7 @@ const Navbar = () => {
               {emailError && <p className="error-message">{emailError}</p>}
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
+              {registrationError && <p className="error-message">{registrationError}</p>}
               <button type="submit" className="registration-button">
                 Register
               </button>
@@ -209,3 +215,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
