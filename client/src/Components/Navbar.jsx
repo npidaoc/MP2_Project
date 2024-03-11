@@ -84,7 +84,7 @@ const Navbar = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/register', {
+      const response = await axios.post('https://mp2-github-io-gnel.vercel.app/', {
         fullName,
         phoneNumber,
         email,
