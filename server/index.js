@@ -17,6 +17,9 @@ const pool = mysql.createPool({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   connectionLimit: 100,
+
+  database: process.env.DB_NAME,
+  connectionLimit: 10,
 });
 
 app.use(bodyParser.json());
@@ -78,3 +81,4 @@ app.get('/api/data', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
