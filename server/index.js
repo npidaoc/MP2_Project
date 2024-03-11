@@ -25,9 +25,8 @@ const pool = mysql.createPool({
 app.use(bodyParser.json());
 
 
-app.use(cors({
-  origin: 'http://yourfrontend.com', // Replace with the actual URL of your frontend
-}));
+app.use(cors());
+
 
 
 const transporter = nodemailer.createTransport({
