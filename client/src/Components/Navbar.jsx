@@ -84,7 +84,7 @@ const Navbar = () => {
     }
 
     try {
-      const response = await axios.post('https://mp2-github-io-gnel.vercel.app/', {
+      const response = await axios.post('https://advertising-solution.onrender.com/', {
         fullName,
         phoneNumber,
         email,
